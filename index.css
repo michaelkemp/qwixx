@@ -1,0 +1,113 @@
+body{
+    font-size: 30px;
+  }
+  table {
+    margin: 10px auto; 
+    border-collapse: collapse;
+  }
+  .checks > td {
+    width:40px;
+    text-align:center;
+    border: 3px solid;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .stks > td {
+    width:50px;
+    text-align:center;
+    border: 3px solid;
+    border-color: #000;
+    cursor: pointer;
+    padding: 5px;
+    color: #000;
+  }
+  .scores > td {
+    width:70px;
+    height:70px;
+    text-align:center;
+    border: 3px solid;
+    border-color: #000;
+    padding: 5px;
+    color: #000;
+  }
+  .dicetable {
+    border-collapse: separate;
+    padding-top: 40px;
+  }
+  .dice > td {
+    width:70px;
+    height:70px;
+    text-align:center;
+    border: 3px solid;
+    border-color: #000;
+    border-radius: 10px;
+    padding: 5px;
+    color: #000;
+  }
+  .d1 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(1.png);
+  }
+  .d2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(2.png);
+  }
+  .d3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(3.png);
+  }
+  .d4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(4.png);
+  }
+  .d5 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(5.png);
+  }
+  .d6 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(6.png);
+  }
+
+  #redrow, #scred, #dir {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  #redrow > td {
+    border-color: #ff0000;
+  }
+  #yelrow, #scyel, #diy {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
+  #yelrow > td {
+    border-color: #ffff00;
+  }
+  #grnrow, #scgrn, #dig {
+    background-color: rgba(0, 128, 0, 0.5);
+  }
+  #grnrow > td {
+    border-color: #008000;
+  }
+  #blurow, #scblu, #dib {
+    background-color: rgba(0, 0, 255, 0.5);
+  }
+  #blurow > td {
+    border-color: #0000ff;
+  }
+  #stkrow, #scstk {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+  #tot {
+    font-size: 55px;
+  }
