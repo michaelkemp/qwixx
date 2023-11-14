@@ -123,10 +123,10 @@
             let dib = Math.floor(Math.random() * 6) + 1;
             document.getElementById("di1").className = "d"+di1;
             document.getElementById("di2").className = "d"+di2;
-            document.getElementById("dir").className = "d"+dir;
-            document.getElementById("diy").className = "d"+diy;
-            document.getElementById("dig").className = "d"+dig;
-            document.getElementById("dib").className = "d"+dib;
+            if (red[11] == 0) document.getElementById("dir").className = "d"+dir;
+            if (yel[11] == 0) document.getElementById("diy").className = "d"+diy;
+            if (grn[11] == 0) document.getElementById("dig").className = "d"+dig;
+            if (blu[11] == 0) document.getElementById("dib").className = "d"+dib;
           }, 50*i);
         }
       });
@@ -211,7 +211,7 @@
         return 0;
       }
 
-      function listen2me(element, hilo, col, num) {
+      function listen2me(element, hilo, col, num, di) {
         if (element.innerHTML == hilo[num]) {
           if (can(col,num)) {
             element.innerHTML = '<i class="fa-solid fa-x"></i>';
@@ -223,6 +223,11 @@
             col[num] = 0;
           }
         }
+        if (col[11] == 1) { // locked
+          document.getElementById(di).classList.add("gone");
+        } else { // not locked
+          document.getElementById(di).classList.remove("gone");
+        }
         score();
       }
 
@@ -232,16 +237,16 @@
         let grnEl = document.getElementById("grn"+i);
         let bluEl = document.getElementById("blu"+i);
         redEl.addEventListener('click', function(){ 
-          listen2me(redEl, lo, red, i);
+          listen2me(redEl, lo, red, i, "dir");
         });
         yelEl.addEventListener('click', function(){ 
-          listen2me(yelEl, lo, yel, i);
+          listen2me(yelEl, lo, yel, i, "diy");
         });
         grnEl.addEventListener('click', function(){ 
-          listen2me(grnEl, hi, grn, i);
+          listen2me(grnEl, hi, grn, i, "dig");
         });
         bluEl.addEventListener('click', function(){ 
-          listen2me(bluEl, hi, blu, i);
+          listen2me(bluEl, hi, blu, i, "dib");
         });
       }
 

@@ -50,6 +50,9 @@ body{
     background-size: 100%;
     background-image: url(1.png);
   }
+  .gone {
+    display:none;
+  }
   .d2 {
     background-repeat: no-repeat;
     background-position: center;
